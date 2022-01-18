@@ -22,6 +22,9 @@ services:
       - roach
     build:
       context: .
+      dockerfile: ./infrastructure/docker/go/Dockerfile
+    volumes:
+      - ./backend:/app
     container_name: rest-server
     hostname: rest-server
     networks:
